@@ -6,16 +6,18 @@ import javax.persistence.*;
  * Created by vj on 2/8/15.
  */
 
-public class WorkEvent {
+@Entity
+@Table(name = "event")
+public class Event {
     @Id
     @Column(name = "event_id", nullable = false)
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long eventId;
     private String event;
     private String time;
-    
+
     // Default constructor
-    protected WorkEvent() {
+    protected Event() {
     }
 
     // Getters
