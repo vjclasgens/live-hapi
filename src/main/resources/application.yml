@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/vanjenson
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    generate-ddl: false
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+---
+
+spring:
+  profiles: test
+
+---
+
+spring:
+  profiles: staging
+
+---
+
+spring:
+  profiles: production
+server:
+  port: 0
